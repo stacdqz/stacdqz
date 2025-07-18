@@ -1,0 +1,108 @@
+json
+<!-- science_innovation_club_website/frontend/data/content.json -->
+{
+    "carousel": [
+        {
+            "id": 1,
+            "title": "机器人竞赛获奖",
+            "description": "我校科创社在2025年全国大学生机器人竞赛中获得一等奖",
+            "imageUrl": "https://picsum.photos/1200/600?random=1"
+        },
+        {
+            "id": 2,
+            "title": "科技创新讲座",
+            "description": "邀请行业专家进行AI前沿技术分享",
+            "imageUrl": "https://picsum.photos/1200/600?random=2"
+        },
+        {
+            "id": 3,
+            "title": "项目成果展示",
+            "description": "社团成员自主创新项目展示活动",
+            "imageUrl": "https://picsum.photos/1200/600?random=3"
+        }
+    ],
+    "recruit": {
+        "title": "2025年秋季招新",
+        "time": "2025年9月1日-9月30日",
+        "target": "全校各年级学生",
+        "requirements": "对科技创新有热情，愿意学习新知识，有团队合作精神",
+        "qrCode": "https://picsum.photos/200/200?random=4"
+    },
+    "about": {
+        "intro": "科创社成立于2015年，是一个致力于科技创新和实践的学生社团。我们聚集了对科技充满热情的同学，共同探索前沿科技，参与各类创新竞赛，并组织丰富多彩的科技活动。",
+        "purpose": "我们的宗旨是\"创新、实践、分享\"。通过组织技术讲座、项目实践和竞赛培训，帮助成员提升科技素养，培养创新思维，并为有志于科技创新的同学提供展示自我的平台。"
+    },
+    "members": [
+        {
+            "id": 1,
+            "name": "张明",
+            "position": "主席",
+            "imageUrl": "https://picsum.photos/300/300?random=5",
+            "contacts": [
+                { "type": "QQ", "value": "123456789" },
+                { "type": "微信", "value": "zhangming2025" },
+                { "type": "电话", "value": "13800138000" }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "李华",
+            "position": "编辑部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=6",
+            "contacts": [
+                { "type": "QQ", "value": "987654321" },
+                { "type": "邮箱", "value": "lihua@example.com" }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "王芳",
+            "position": "活动部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=7",
+            "contacts": [
+                { "type": "微信", "value": "wangfang2025" },
+                { "type": "电话", "value": "13900139000" }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "赵强",
+            "position": "新媒体部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=8",
+            "contacts": [
+                { "type": "QQ", "value": "456789123" },
+                { "type": "邮箱", "value": "zhaoqiang@example.com" }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "刘伟",
+            "position": "飓风试验部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=9",
+            "contacts": [
+                { "type": "微信", "value": "liuwei2025" },
+                { "type": "电话", "value": "13700137000" }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "陈晨",
+            "position": "宣传部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=10",
+            "contacts": [
+                { "type": "QQ", "value": "789123456" },
+                { "type": "邮箱", "value": "chenchen@example.com" }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "杨阳",
+            "position": "网络部部长",
+            "imageUrl": "https://picsum.photos/300/300?random=11",
+            "contacts": [
+                { "type": "微信", "value": "yangyang2025" },
+                { "type": "电话", "value": "13600136000" }
+            ]
+        }
+    ]
+}

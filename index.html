@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>成都七中科学技术协会-STA</title>
+    <title>成都七中科学技术协会 - 探索科技未来</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.loli.net/css?family=Noto+Sans+SC:400,700&display=swap" rel="stylesheet">
     <style>
@@ -48,6 +48,19 @@
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
+        .member-card {
+            transition: all 0.3s ease;
+        }
+        .member-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        .contact-icon {
+            transition: all 0.3s ease;
+        }
+        .contact-icon:hover {
+            transform: scale(1.2);
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -59,13 +72,15 @@
         <div class="container mx-auto flex justify-between items-center">
             <div class="text-2xl font-bold flex items-center">
                 <span class="mr-2">🚀</span>
-                <span>成都七中科学技术协会-STA</span>
+                <span>成都七中科学技术协会</span>
             </div>
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="hover:text-blue-200 transition">首页</a>
                 <a href="#about" class="hover:text-blue-200 transition">关于我们</a>
+                <a href="#members" class="hover:text-blue-200 transition">核心成员</a>
                 <a href="#activities" class="hover:text-blue-200 transition">活动展示</a>
                 <a href="#recruit" class="hover:text-blue-200 transition">招新信息</a>
+                <a href="https://www.bilibili.com" target="_blank" class="hover:text-blue-200 transition">联系我们</a>
             </div>
             <button class="md:hidden text-2xl">☰</button>
         </div>
@@ -99,15 +114,24 @@
                 <div class="card bg-white p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-blue-800">社团简介</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        成都七中科学技术协会（简称成七科协，STA）成立于1999年，是成都七中四大学生组织之一，也是四川省首个高中生科技类学生组织。
+                        科创社成立于2015年，是一个致力于科技创新和实践的学生社团。我们聚集了对科技充满热情的同学，共同探索前沿科技，参与各类创新竞赛，并组织丰富多彩的科技活动。
                     </p>
                 </div>
                 <div class="card bg-white p-6 rounded-lg">
                     <h3 class="text-xl font-semibold mb-4 text-blue-800">社团宗旨</h3>
                     <p class="text-gray-700 leading-relaxed">
-                        我们的宗旨是普及科技知识、培养科学兴趣、提升学生科学素养
+                        我们的宗旨是"创新、实践、分享"。通过组织技术讲座、项目实践和竞赛培训，帮助成员提升科技素养，培养创新思维，并为有志于科技创新的同学提供展示自我的平台。
                     </p>
                 </div>
+            </div>
+        </section>
+
+        <!-- 核心成员 -->
+        <section id="members" class="mb-16">
+            <h2 class="text-3xl font-bold mb-8 text-center text-gray-800">核心成员</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- 成员卡片将通过JS动态生成 -->
+                <div id="members-container" class="col-span-full grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
             </div>
         </section>
 
@@ -118,22 +142,22 @@
                 <div class="card bg-white rounded-lg overflow-hidden">
                     <img src="https://picsum.photos/600/400?random=1" alt="机器人竞赛" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-blue-800">活动1</h3>
-                        <p class="text-gray-700">活动1介绍</p>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">机器人竞赛</h3>
+                        <p class="text-gray-700">我们参加了2025年全国大学生机器人竞赛，获得了一等奖的好成绩。</p>
                     </div>
                 </div>
                 <div class="card bg-white rounded-lg overflow-hidden">
                     <img src="https://picsum.photos/600/400?random=2" alt="科技讲座" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-blue-800">活动2</h3>
-                        <p class="text-gray-700">活动2介绍</p>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">科技讲座</h3>
+                        <p class="text-gray-700">定期邀请行业专家进行前沿科技分享，拓宽成员视野。</p>
                     </div>
                 </div>
                 <div class="card bg-white rounded-lg overflow-hidden">
                     <img src="https://picsum.photos/600/400?random=3" alt="项目展示" class="w-full h-48 object-cover">
                     <div class="p-4">
-                        <h3 class="text-xl font-semibold mb-2 text-blue-800">活动3</h3>
-                        <p class="text-gray-700">活动3介绍</p>
+                        <h3 class="text-xl font-semibold mb-2 text-blue-800">项目展示</h3>
+                        <p class="text-gray-700">成员自主创新项目展示，促进交流与合作。</p>
                     </div>
                 </div>
             </div>
@@ -166,18 +190,19 @@
                 <div class="mb-4 md:mb-0">
                     <h3 class="text-xl font-bold flex items-center">
                         <span class="mr-2">🚀</span>
-                        <span>成七科协</span>
+                        <span>成都七中科学技术协会</span>
                     </h3>
                     <p class="text-gray-400 mt-2">探索科技未来，创造无限可能</p>
                 </div>
                 <div class="flex space-x-4">
-                    <a href="#" class="text-gray-400 hover:text-white transition">关于我们</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">联系我们</a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">加入我们</a>
+                    <a href="#about" class="text-gray-400 hover:text-white transition">关于我们</a>
+                    <a href="#members" class="text-gray-400 hover:text-white transition">核心成员</a>
+                    <a href="https://www.bilibili.com" target="_blank" class="text-gray-400 hover:text-white transition">联系我们</a>
+                    <a href="#recruit" class="text-gray-400 hover:text-white transition">加入我们</a>
                 </div>
             </div>
             <div class="mt-6 pt-6 border-t border-gray-700 text-center text-gray-400">
-                <p>© 2025 STA 版权所有</p>
+                <p>© 2025 成都七中科学技术协会 版权所有</p>
             </div>
         </div>
     </footer>
