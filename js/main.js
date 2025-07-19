@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             memberCard.innerHTML = `
-                <img src="${member.imageUrl}" alt="${member.name}" class="w-full h-48 object-cover">
+                <img src="${member.imageUrl}" alt="${member.name}" class="member-image">
                 <div class="p-4">
                     <h3 class="member-name text-xl font-bold text-gray-800">${member.name}</h3>
                     <p class="member-position text-blue-600 font-medium mb-3">${member.position}</p>
