@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('membersData', JSON.stringify(data.members));
             localStorage.setItem('activitiesData', JSON.stringify(data.activities));
             localStorage.setItem('organizationData', JSON.stringify(data.organization));
+            localStorage.setItem('siteInfo', JSON.stringify(data.siteInfo));
             
             // 初始化轮播图
             initCarousel(data.carousel);
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // 更新活动展示
             updateActivities(data.activities);
             updateOrganization(data.organization);
+            updateSiteInfo(data.siteInfo);
             // 启动轮播
             startAutoPlay();
         })
@@ -172,14 +174,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         "陈治宇主席：longliveSTA！"
                     ],
                     founder: "周涛（电子科技大学教授）"
+                },
+                siteInfo: {
+                    version: "v1.0.3",
+                    lastUpdated: "2024-06-09"
                 }
             };
             localStorage.setItem('organizationData', JSON.stringify(defaultData.organization));
+            localStorage.setItem('siteInfo', JSON.stringify(defaultData.siteInfo));
             initCarousel(defaultData.carousel);
             updateRecruitInfo(defaultData.recruit);
             initMembers(defaultData.members);
             updateActivities(defaultData.activities);
             updateOrganization(defaultData.organization);
+            updateSiteInfo(defaultData.siteInfo);
             startAutoPlay();
         });
 
@@ -341,6 +349,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 </ul>
             </div>
         `;
+    }
+
+    // 新增：页脚版本号和更新日期渲染
+    function updateSiteInfo(siteInfo) {
+        const infoDiv = document.getElementById('site-info');
+        if (infoDiv && siteInfo) {
+            infoDiv.innerHTML = `版本号：${siteInfo.version}　最后更新：${siteInfo.lastUpdated}`;
+        }
     }
 
     // 切换轮播图

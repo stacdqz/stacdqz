@@ -2,37 +2,43 @@
     "carousel": [
         {
             "id": 1,
-            "title": "e1",
-            "description": "in1",
-            "imageUrl": "https://picsum.photos/1200/600?random=1"
+            "title": "STA 2025招新",
+            "description": "一到夏天我要去科协",
+            "imageUrl": "images/sta.png"
         },
         {
             "id": 2,
-            "title": "e2",
-            "description": "in2",
-            "imageUrl": "https://picsum.photos/1200/600?random=2"
+            "title": "STA 2025招新",
+            "description": "一到夏天我要去科协",
+            "imageUrl": "images/logo4.png"
         },
         {
             "id": 3,
-            "title": "e3",
-            "description": "in3",
-            "imageUrl": "https://picsum.photos/1200/600?random=3"
+            "title": "STA 2025招新",
+            "description": "一到夏天我要去科协",
+            "imageUrl": "images/logo2.png"
+        },
+        {
+            "id": 4,
+            "title": "STA 2025招新",
+            "description": "一到夏天我要去科协",
+            "imageUrl": "images/logo3.png"
         }
     ],
     "recruit": {
         "title": "2025年秋季招新",
-        "time": "2025年9月1日-9月30日",
+        "time": "2025年9月初",
         "target": "全校各年级学生",
         "requirements": "对科技创新有热情，愿意学习新知识，有团队合作精神",
-        "qrCode": "https://picsum.photos/200/200?random=4"
+        "qrCode": "images/logo.png"
     },
     
     "members": [
         {
             "id": 1,
-            "name": "热爱飞机的梁惟凯",
+            "name": "罗承希",
             "position": "主席",
-            "imageUrl": "https://picsum.photos/300/300?random=5",
+            "imageUrl": "images/sta.png",
             "contacts": [
                 { "type": "QQ", "value": "" },
                 { "type": "微信", "value": "" },
@@ -41,9 +47,9 @@
         },
         {
             "id": 2,
-            "name": "是狮子的好朋友的梁惟凯",
+            "name": "",
             "position": "编辑部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=6",
+            "imageUrl": "images/logo.png",
             "contacts": [
                 { "type": "QQ", "value": "" },
                 { "type": "邮箱", "value": "" }
@@ -51,9 +57,9 @@
         },
         {
             "id": 3,
-            "name": "领导",
+            "name": "",
             "position": "活动部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=7",
+            "imageUrl": "images/logo4.png",
             "contacts": [
                 { "type": "微信", "value": "" },
                 { "type": "电话", "value": "" }
@@ -61,9 +67,9 @@
         },
         {
             "id": 4,
-            "name": "抽象哥梁惟凯",
+            "name": "",
             "position": "新媒体部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=8",
+            "imageUrl": "images/sta.png",
             "contacts": [
                 { "type": "QQ", "value": "" },
                 { "type": "邮箱", "value": "" }
@@ -71,9 +77,9 @@
         },
         {
             "id": 5,
-            "name": "开飞机会坠毁的梁惟凯",
+            "name": "",
             "position": "飓风试验部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=9",
+            "imageUrl": "images/logo.png",
             "contacts": [
                 { "type": "微信", "value": "" },
                 { "type": "电话", "value": "" }
@@ -81,9 +87,9 @@
         },
         {
             "id": 6,
-            "name": "梁狮航总裁：梁惟凯",
+            "name": "",
             "position": "宣传部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=10",
+            "imageUrl": "images/sta.png",
             "contacts": [
                 { "type": "QQ", "value": "" },
                 { "type": "邮箱", "value": "" }
@@ -91,9 +97,9 @@
         },
         {
             "id": 7,
-            "name": "飞机哥梁惟凯",
+            "name": "",
             "position": "网络部部长",
-            "imageUrl": "https://picsum.photos/300/300?random=11",
+            "imageUrl": "images/logo4.png",
             "contacts": [
                 { "type": "微信", "value": "" },
                 { "type": "电话", "value": "" }
@@ -104,17 +110,17 @@
         {
             "title": "t1",
             "description": "i1",
-            "imageUrl": "https://picsum.photos/600/400?random=1"
+            "imageUrl": "images/sta.png"
         },
         {
             "title": "t2",
             "description": "i2",
-            "imageUrl": "https://picsum.photos/600/400?random=2"
+            "imageUrl": "images/sta.png"
         },
         {
             "title": "t3",
             "description": "i3",
-            "imageUrl": "https://picsum.photos/600/400?random=3"
+            "imageUrl": "images/sta.png"
         }
     ],
     "organization": {
@@ -135,12 +141,18 @@
             "2012年，网络部改制为技术部，杂志内容拓展为科普与校园生活结合，主席陈治宇。",
             "2016年，科协成立十七周年，部门调整为活动部、宣传部、编辑部、技术部。"
         ],
-        "description": "成都七中科学技术协会（STA）成立于1999年，是成都七中四大学生组织之一，也是四川省首个高中生科技类学生组织。宗旨为普及科技知识、培养科学兴趣、提升学生科学素养。主要工作包括编辑校级杂志《未来梦》、承办科技活动月、未来梦大讲坛等校级活动，并开展校际科技交流。现设活动部、宣传部、编辑部、技术部四大部门，形成以“自由、公平、勇气”为核心的发展体系。",
+        "description": "成都七中科学技术协会（STA）成立于1999年，是成都七中四大学生组织之一，也是四川省首个高中生科技类学生组织。<br>主要工作包括编辑校级杂志《未来梦》、承办科技活动月、未来梦大讲坛等校级活动，并开展校际科技交流。<br>现设活动部、宣传部、编辑部、技术部四大部门，形成以“自由、公平、勇气”为核心的发展体系。",
         "quotes": [
             "范伟艺主席：一到夏天我要去科协",
             "张晟阳主席：生是科协人，死是科协的尸体，就算烧成灰，也要用科协的扫把扫",
-            "陈治宇主席：longliveSTA！"
+            "陈治宇主席：longliveSTA！",
+            "风雨共济 从未离开",
+            "我们要一直爱着七中爱着科协。"
         ],
         "founder": "周涛（电子科技大学教授）"
+    },
+    "siteInfo": {
+        "version": "v0.1.0_alpha",
+        "lastUpdated": "2025-07-19  17:50"
     }
 }
