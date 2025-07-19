@@ -1,23 +1,21 @@
-json
-<!-- science_innovation_club_website/frontend/data/content.json -->
 {
     "carousel": [
         {
             "id": 1,
-            "title": "机器人竞赛获奖",
-            "description": "我校科创社在2025年全国大学生机器人竞赛中获得一等奖",
+            "title": "e1",
+            "description": "in1",
             "imageUrl": "https://picsum.photos/1200/600?random=1"
         },
         {
             "id": 2,
-            "title": "科技创新讲座",
-            "description": "邀请行业专家进行AI前沿技术分享",
+            "title": "e2",
+            "description": "in2",
             "imageUrl": "https://picsum.photos/1200/600?random=2"
         },
         {
             "id": 3,
-            "title": "项目成果展示",
-            "description": "社团成员自主创新项目展示活动",
+            "title": "e3",
+            "description": "in3",
             "imageUrl": "https://picsum.photos/1200/600?random=3"
         }
     ],
@@ -28,81 +26,121 @@ json
         "requirements": "对科技创新有热情，愿意学习新知识，有团队合作精神",
         "qrCode": "https://picsum.photos/200/200?random=4"
     },
-    "about": {
-        "intro": "科创社成立于2015年，是一个致力于科技创新和实践的学生社团。我们聚集了对科技充满热情的同学，共同探索前沿科技，参与各类创新竞赛，并组织丰富多彩的科技活动。",
-        "purpose": "我们的宗旨是\"创新、实践、分享\"。通过组织技术讲座、项目实践和竞赛培训，帮助成员提升科技素养，培养创新思维，并为有志于科技创新的同学提供展示自我的平台。"
-    },
+    
     "members": [
         {
             "id": 1,
-            "name": "张明",
+            "name": "罗承希",
             "position": "主席",
             "imageUrl": "https://picsum.photos/300/300?random=5",
             "contacts": [
-                { "type": "QQ", "value": "123456789" },
-                { "type": "微信", "value": "zhangming2025" },
-                { "type": "电话", "value": "13800138000" }
+                { "type": "QQ", "value": "" },
+                { "type": "微信", "value": "" },
+                { "type": "电话", "value": "" }
             ]
         },
         {
             "id": 2,
-            "name": "李华",
+            "name": "",
             "position": "编辑部部长",
             "imageUrl": "https://picsum.photos/300/300?random=6",
             "contacts": [
-                { "type": "QQ", "value": "987654321" },
-                { "type": "邮箱", "value": "lihua@example.com" }
+                { "type": "QQ", "value": "" },
+                { "type": "邮箱", "value": "" }
             ]
         },
         {
             "id": 3,
-            "name": "王芳",
+            "name": "",
             "position": "活动部部长",
             "imageUrl": "https://picsum.photos/300/300?random=7",
             "contacts": [
-                { "type": "微信", "value": "wangfang2025" },
-                { "type": "电话", "value": "13900139000" }
+                { "type": "微信", "value": "" },
+                { "type": "电话", "value": "" }
             ]
         },
         {
             "id": 4,
-            "name": "赵强",
+            "name": "",
             "position": "新媒体部部长",
             "imageUrl": "https://picsum.photos/300/300?random=8",
             "contacts": [
-                { "type": "QQ", "value": "456789123" },
-                { "type": "邮箱", "value": "zhaoqiang@example.com" }
+                { "type": "QQ", "value": "" },
+                { "type": "邮箱", "value": "" }
             ]
         },
         {
             "id": 5,
-            "name": "刘伟",
+            "name": "",
             "position": "飓风试验部部长",
             "imageUrl": "https://picsum.photos/300/300?random=9",
             "contacts": [
-                { "type": "微信", "value": "liuwei2025" },
-                { "type": "电话", "value": "13700137000" }
+                { "type": "微信", "value": "" },
+                { "type": "电话", "value": "" }
             ]
         },
         {
             "id": 6,
-            "name": "陈晨",
+            "name": "",
             "position": "宣传部部长",
             "imageUrl": "https://picsum.photos/300/300?random=10",
             "contacts": [
-                { "type": "QQ", "value": "789123456" },
-                { "type": "邮箱", "value": "chenchen@example.com" }
+                { "type": "QQ", "value": "" },
+                { "type": "邮箱", "value": "" }
             ]
         },
         {
             "id": 7,
-            "name": "杨阳",
+            "name": "",
             "position": "网络部部长",
             "imageUrl": "https://picsum.photos/300/300?random=11",
             "contacts": [
-                { "type": "微信", "value": "yangyang2025" },
-                { "type": "电话", "value": "13600136000" }
+                { "type": "微信", "value": "" },
+                { "type": "电话", "value": "" }
             ]
         }
-    ]
+    ],
+    "activities": [
+        {
+            "title": "t1",
+            "description": "i1",
+            "imageUrl": "https://picsum.photos/600/400?random=1"
+        },
+        {
+            "title": "t2",
+            "description": "i2",
+            "imageUrl": "https://picsum.photos/600/400?random=2"
+        },
+        {
+            "title": "t3",
+            "description": "i3",
+            "imageUrl": "https://picsum.photos/600/400?random=3"
+        }
+    ],
+    "organization": {
+        "chineseName": "成都七中科学技术协会",
+        "englishName": "Science & Technology Association of Chengdu No.7 High School",
+        "abbreviation": "科协",
+        "shortEN": "STA",
+        "type": "校级科技类高中生学生组织",
+        "magazine": "《未来梦》",
+        "currentPresident": "罗承希",
+        "departments": ["活动部", "新媒体部", "编辑部", "宣传部","飓风试验部", "网络部"],
+        "coreValues": "自由、公平、勇气",
+        "history": [
+            "1999年，周涛教授建立科协，初为学生社团，负责科技创新管理与竞赛事务。",
+            "2000年，《未来梦》杂志创刊，成立编辑部前身。",
+            "2005年，科协由社团转型为学生组织，增设科技部、科创部、编辑部。",
+            "2011年，《未来梦》出版第一本全彩杂志，主席张晟阳。",
+            "2012年，网络部改制为技术部，杂志内容拓展为科普与校园生活结合，主席陈治宇。",
+            "2016年，科协成立十七周年，部门调整为活动部、宣传部、编辑部、技术部。"
+        ],
+        "description": "成都七中科学技术协会（STA）成立于1999年，是成都七中四大学生组织之一，也是四川省首个高中生科技类学生组织。宗旨为普及科技知识、培养科学兴趣、提升学生科学素养。主要工作包括编辑校级杂志《未来梦》、承办科技活动月、未来梦大讲坛等校级活动，并开展校际科技交流。现设活动部、宣传部、编辑部、技术部四大部门，形成以“自由、公平、勇气”为核心的发展体系。",
+        "quotes": [
+            "范伟艺主席：一到夏天我要去科协",
+            "张晟阳主席：生是科协人，死是科协的尸体，就算烧成灰，也要用科协的扫把扫",
+            "陈治宇主席：longliveSTA！"
+        ],
+        "founder": "周涛（电子科技大学教授）"
+    }
 }

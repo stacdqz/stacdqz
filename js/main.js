@@ -1,5 +1,3 @@
-
-<!-- science_innovation_club_website/frontend/js/main.js -->
 document.addEventListener('DOMContentLoaded', function() {
     // 从JSON文件加载数据
     fetch('data/content.json')
@@ -10,6 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('carouselData', JSON.stringify(data.carousel));
             localStorage.setItem('recruitInfo', JSON.stringify(data.recruit));
             localStorage.setItem('membersData', JSON.stringify(data.members));
+            localStorage.setItem('activitiesData', JSON.stringify(data.activities));
+            localStorage.setItem('organizationData', JSON.stringify(data.organization));
             
             // 初始化轮播图
             initCarousel(data.carousel);
@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
             // 初始化成员展示
             initMembers(data.members);
             
+            // 更新活动展示
+            updateActivities(data.activities);
+            updateOrganization(data.organization);
             // 启动轮播
             startAutoPlay();
         })
@@ -57,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 members: [
                     {
                         id: 1,
-                        name: "张明",
+                        name: "张",
                         position: "主席",
                         imageUrl: "https://picsum.photos/300/300?random=5",
                         contacts: [
@@ -126,12 +129,57 @@ document.addEventListener('DOMContentLoaded', function() {
                             { type: "电话", value: "13600136000" }
                         ]
                     }
-                ]
+                ],
+                activities: [
+                    {
+                        title: "机器人竞赛",
+                        description: "我们参加了2025年全国大学生机器人竞赛，获得了一等奖的好成绩。",
+                        imageUrl: "https://picsum.photos/600/400?random=1"
+                    },
+                    {
+                        title: "科技讲座",
+                        description: "定期邀请行业专家进行前沿科技分享，拓宽成员视野。",
+                        imageUrl: "https://picsum.photos/600/400?random=2"
+                    },
+                    {
+                        title: "项目展示",
+                        description: "成员自主创新项目展示，促进交流与合作。",
+                        imageUrl: "https://picsum.photos/600/400?random=3"
+                    }
+                ],
+                organization: {
+                    chineseName: "成都七中科学技术协会",
+                    englishName: "Science & Technology Association of Chengdu No.7 High School",
+                    abbreviation: "科协",
+                    shortEN: "STA",
+                    type: "校级科技类高中生学生组织",
+                    magazine: "《未来梦》",
+                    currentPresident: "罗承希",
+                    departments: ["活动部", "新媒体部", "编辑部", "宣传部","飓风试验部", "网络部"],
+                    coreValues: "自由、公平、勇气",
+                    history: [
+                        "1999年，周涛教授建立科协，初为学生社团，负责科技创新管理与竞赛事务。",
+                        "2000年，《未来梦》杂志创刊，成立编辑部前身。",
+                        "2005年，科协由社团转型为学生组织，增设科技部、科创部、编辑部。",
+                        "2011年，《未来梦》出版第一本全彩杂志，主席张晟阳。",
+                        "2012年，网络部改制为技术部，杂志内容拓展为科普与校园生活结合，主席陈治宇。",
+                        "2016年，科协成立十七周年，部门调整为活动部、宣传部、编辑部、技术部。"
+                    ],
+                    description: "成都七中科学技术协会（STA）成立于1999年，是成都七中四大学生组织之一，也是四川省首个高中生科技类学生组织。宗旨为普及科技知识、培养科学兴趣、提升学生科学素养。主要工作包括编辑校级杂志《未来梦》、承办科技活动月、未来梦大讲坛等校级活动，并开展校际科技交流。现设活动部、宣传部、编辑部、技术部四大部门，形成以“自由、公平、勇气”为核心的发展体系。",
+                    quotes: [
+                        "范伟艺主席：一到夏天我要去科协",
+                        "张晟阳主席：生是科协人，死是科协的尸体，就算烧成灰，也要用科协的扫把扫",
+                        "陈治宇主席：longliveSTA！"
+                    ],
+                    founder: "周涛（电子科技大学教授）"
+                }
             };
-            localStorage.setItem('clubName', '成都七中科学技术协会');
+            localStorage.setItem('organizationData', JSON.stringify(defaultData.organization));
             initCarousel(defaultData.carousel);
             updateRecruitInfo(defaultData.recruit);
             initMembers(defaultData.members);
+            updateActivities(defaultData.activities);
+            updateOrganization(defaultData.organization);
             startAutoPlay();
         });
 
@@ -241,6 +289,58 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             membersContainer.appendChild(memberCard);
         });
+    }
+
+    // 新增：活动展示动态渲染
+    function updateActivities(activitiesData) {
+        const activitiesContainer = document.getElementById('activities-container');
+        activitiesContainer.innerHTML = '';
+        activitiesData.forEach(activity => {
+            const card = document.createElement('div');
+            card.className = 'card bg-white rounded-lg overflow-hidden';
+            card.innerHTML = `
+                <img src="${activity.imageUrl}" alt="${activity.title}" class="w-full h-48 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-semibold mb-2 text-blue-800">${activity.title}</h3>
+                    <p class="text-gray-700">${activity.description}</p>
+                </div>
+            `;
+            activitiesContainer.appendChild(card);
+        });
+    }
+
+    // 新增：组织介绍渲染
+    function updateOrganization(org) {
+        const container = document.getElementById('organization-container');
+        container.innerHTML = `
+            <div class="card bg-white p-6 rounded-lg shadow mb-6">
+                <h3 class="text-2xl font-bold text-blue-800 mb-2">${org.chineseName} <span class="text-base text-gray-500">(${org.englishName})</span></h3>
+                <p class="mb-2"><span class="font-semibold">简称：</span>${org.abbreviation} (${org.shortEN})</p>
+                <p class="mb-2"><span class="font-semibold">性质：</span>${org.type}</p>
+                <p class="mb-2"><span class="font-semibold">官方杂志：</span>${org.magazine}</p>
+                <p class="mb-2"><span class="font-semibold">现任主席：</span>${org.currentPresident}</p>
+                <p class="mb-2"><span class="font-semibold">部门：</span>${org.departments.join('、')}</p>
+                <p class="mb-2"><span class="font-semibold">核心价值：</span>${org.coreValues}</p>
+                <p class="mb-2"><span class="font-semibold">创始人：</span>${org.founder}</p>
+                <p class="mb-2"><span class="font-semibold">我们的宗旨：</span>普及科技知识、培养科学兴趣、提升学生科学素养</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow mb-6">
+                <h4 class="text-xl font-semibold text-blue-800 mb-2">组织简介</h4>
+                <p class="text-gray-700">${org.description}</p>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow mb-6">
+                <h4 class="text-xl font-semibold text-blue-800 mb-2">发展历史</h4>
+                <ul class="list-disc pl-6 text-gray-700">
+                    ${org.history.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+            <div class="card bg-white p-6 rounded-lg shadow">
+                <h4 class="text-xl font-semibold text-blue-800 mb-2">科协人都知道的几句话</h4>
+                <ul class="list-disc pl-6 text-gray-700">
+                    ${org.quotes.map(q => `<li>${q}</li>`).join('')}
+                </ul>
+            </div>
+        `;
     }
 
     // 切换轮播图
