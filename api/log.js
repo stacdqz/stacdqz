@@ -1,5 +1,7 @@
-// 记录访问日志（Post 专用）
-import { kv } from '@vercel/kv';
+// api/log.js
+import { Redis } from '@upstash/redis';
+
+const redis = Redis.fromEnv();
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).end();
@@ -8,6 +10,6 @@ export default async function handler(req, res) {
   const ua = req.headers['user-agent'];
   const now = new Date().toISOString();
 
-  await kv.lpush('access_log', { ip, ua, now });
+  await redis.lpush('access_log', JSON.stringify({ ip, ua, now }));
   res.status(200).json({ ok: true });
 }
