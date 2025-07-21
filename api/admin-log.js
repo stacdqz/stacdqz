@@ -12,13 +12,16 @@ export default async function handler(req, res) {
 
   const logs = await redis.lrange('access_log', 0, 99);
 
-  // 安全解析每一条日志，跳过解析失败的项
+  // 只解析字符串类型，跳过非字符串
   const safeLogs = logs.map(item => {
-    try {
-      return JSON.parse(item);
-    } catch (e) {
-      return null;
+    if (typeof item === 'string') {
+      try {
+        return JSON.parse(item);
+      } catch (e) {
+        return null;
+      }
     }
+    return null;
   }).filter(Boolean);
 
   res.status(200).json(safeLogs);
