@@ -208,10 +208,10 @@ document.addEventListener('DOMContentLoaded', function() {
         carouselData.forEach((item, index) => {
             // 创建轮播项
             const carouselItem = document.createElement('div');
-            carouselItem.className = `carousel-item absolute inset-0 ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
+            carouselItem.className = `carousel-item absolute inset-0 fade-in ${index === 0 ? 'opacity-100' : 'opacity-0'}`;
             carouselItem.innerHTML = `
                 <img src="${item.imageUrl}" alt="${item.title}" class="w-full h-full object-cover">
-                <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black to-transparent text-white">
+                <div class="carousel-caption">
                     <h3 class="text-2xl font-bold">${item.title}</h3>
                     <p class="mt-2">${item.description}</p>
                 </div>
@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // 创建指示器
             const indicator = document.createElement('div');
-            indicator.className = `indicator w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer transition ${index === 0 ? 'bg-opacity-100' : ''}`;
+            indicator.className = `indicator w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer transition${index === 0 ? ' active bg-opacity-100' : ''}`;
             indicator.dataset.index = index;
             indicator.addEventListener('click', () => goToSlide(index));
             indicatorsContainer.appendChild(indicator);
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         membersData.forEach(member => {
             const memberCard = document.createElement('div');
-            memberCard.className = 'member-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl';
+            memberCard.className = 'member-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl fade-in';
             
             let contactsHTML = '';
             member.contacts.forEach(contact => {
@@ -286,11 +286,11 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             memberCard.innerHTML = `
-                <img src="${member.imageUrl}" alt="${member.name}" class="member-image">
-                <div class="p-4">
+                <img src="${member.imageUrl}" alt="${member.name}" class="member-image w-full h-48 object-contain">
+                <div class="p-4 member-info">
                     <h3 class="member-name text-xl font-bold text-gray-800">${member.name}</h3>
                     <p class="member-position text-blue-600 font-medium mb-3">${member.position}</p>
-                    <div class="member-contacts space-y-2">
+                    <div class="member-contact space-y-2">
                         ${contactsHTML}
                     </div>
                 </div>
@@ -372,6 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         indicators.forEach((indicator, i) => {
+            indicator.classList.toggle('active', i === index);
             indicator.classList.toggle('bg-opacity-100', i === index);
             indicator.classList.toggle('bg-opacity-50', i !== index);
         });

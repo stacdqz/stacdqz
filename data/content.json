@@ -8,7 +8,7 @@
         },
         {
             "id": 2,
-            "title": "people 2025招新",
+            "title": "STA 2025招新",
             "description": "一到夏天我要去科协",
             "imageUrl": "images/logo4.png"
         },
@@ -20,7 +20,7 @@
         },
         {
             "id": 4,
-            "title": "people 2025招新",
+            "title": "STA 2025招新",
             "description": "一到夏天我要去科协",
             "imageUrl": "images/logo3.png"
         }
@@ -152,7 +152,7 @@
         "founder": "周涛（电子科技大学教授）"
     },
     "siteInfo": {
-        "version": "内部测试 v0.1.0_alpha",
-        "lastUpdated": "2025-07-19  19:37"
+        "version": "内部测试 v0.1.1_alpha",
+        "lastUpdated": "2025-07-22  23:11"
     }
 }
